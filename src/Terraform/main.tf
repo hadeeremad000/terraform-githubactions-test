@@ -10,7 +10,7 @@ terraform {
     resource_group_name  = "friday-demo-rg"
     storage_account_name = "sttfstatemgt01"
     container_name       = "tfstate"
-    key                  = "dev.terraform.tfstate"
+    key                  = "test.terraform.tfstate"
   }
 }
 
