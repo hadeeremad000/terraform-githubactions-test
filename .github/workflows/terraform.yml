@@ -65,7 +65,7 @@ jobs:
       run:
         shell: bash
     env: 
-      ROOT_PATH: '{{ github.workspace }}/src/Terraform'
+      ROOT_PATH: '${{github.workspace}}/src/Terraform'
       ARM_CLIENT_ID: ${{secrets.AZURE_CLIENT_ID}}
       ARM_CLIENT_SECRET: ${{secrets.AZURE_CLIENT_SECRET}}
       ARM_SUBSCRIPTION_ID: ${{secrets.AZURE_SUBSCRIPTION_ID}}
@@ -75,7 +75,7 @@ jobs:
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
